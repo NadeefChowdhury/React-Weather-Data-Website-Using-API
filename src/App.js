@@ -15,7 +15,7 @@ class App extends React.Component {
   handleSubmit = async(e) => {
     e.preventDefault();
     const cityName = this.state.city;
-    axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=35cc67f0879acce0df384f2062967119&units=metric`)
+    axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=[USE YOUR OWN API KEY HERE]&units=metric`)
     .then((response)=>{
       this.setState({temp:response.data.list[39].main.temp});
     this.setState({main:response.data.list[39].weather[0].main});
